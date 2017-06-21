@@ -9,10 +9,29 @@ let roster = [
   [22, 'MK DiBoux ', 'Small Forward ', [11, 0, 23, 17, 0] ]
 ]
 
+
+
+
+//console.log(tampung);
+ //var saya ='pintar';
+ var pintar = 'saya';
+
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
 
 function convert_roster_format (nestedArray) {
   // your convert code here
+  let newRoster = []
+
+  let panjangValue = roster[1].length
+  let tunjuk = 1;
+  for (var i = 1; i < roster.length; i++) {
+    var objBaru = {};
+    for (let j = 0; j < panjangValue; j++) {
+      objBaru[roster[0][j]] = roster[i][j]
+
+    }newRoster.push(objBaru)
+  }
+  return newRoster
 }
 
 let object_roster = convert_roster_format(roster)
