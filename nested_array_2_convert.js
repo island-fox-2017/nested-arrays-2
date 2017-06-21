@@ -1,7 +1,7 @@
 'use strict'
 
 let roster = [
-  ['Number', 'Name', 'Position', 'Points per Game'],
+  ['Number', 'Name', 'Position', 'Points_per_Game'],
   [12, 'Joe Schmo', 'Center', [14, 32, 7, 0, 23] ],
   [9, 'Ms. Buckets', 'Point Guard', [19, 0, 11, 22, 0] ],
   [31, 'Harvey Kay', 'Shooting Guard', [0, 30, 16, 0, 25] ],
@@ -12,8 +12,18 @@ let roster = [
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
 
 function convert_roster_format (nestedArray) {
-  // your convert code here
+  let arrBaru = []
+  for (var i = 1; i < nestedArray.length; i++) {
+    let Obj ={}
+    for (var j = 0; j < nestedArray[1].length; j++) {
+      Obj[nestedArray[0][j]]=nestedArray[i][j]
+
+    }
+      arrBaru.push(Obj)
+  }
+    return arrBaru
 }
+
 
 let object_roster = convert_roster_format(roster)
 console.log(object_roster[2])
