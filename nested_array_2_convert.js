@@ -13,10 +13,32 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
-}
+  var objArr =[];
 
+  for(var i = 1; i < nestedArray.length; i++){
+  var toObject = {};
+    for(var j = 0; j < nestedArray.length; j++){
+    // var subArray = nestedArray[i];
+    // var item = {
+    //   Numb :nestedArray[0][0],
+    //   Name :nestedArray[1][2],
+    //   Posisi :nestedArray[2][2],
+    //   Poin :nestedArray[3][2]
+    // };
+    // var konten = {
+      toObject[nestedArray[0][j]]=nestedArray[i][j];
+    // }
+
+    // console.log(item);
+  }
+  objArr.push(toObject);
+  }
+  return objArr;
+}
+// console.log(convert_roster_format());
 let object_roster = convert_roster_format(roster)
 console.log(object_roster[2])
+// console.log(convert_roster_format(roster));
 
 // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
 
