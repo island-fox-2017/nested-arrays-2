@@ -17,13 +17,13 @@ function convert_roster_format(nestedArray) {
 
   for (let i = 1; i < roster.length; i++) {
     let obj = {}
-    for (let j = 0; j < roster[i].length; j++) {
+    for (let j = 0; j < roster[1].length; j++) {
       obj[nestedArray[0][j]] = nestedArray[i][j]
     }
     arr.push(obj)
   }
   
-  return arr
+  return arr;
 }
 
 
