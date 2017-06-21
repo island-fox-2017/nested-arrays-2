@@ -8,7 +8,6 @@ let roster = [
   [7, 'Sally Talls', 'Power Forward ', [18, 29, 26, 31, 19] ],
   [22, 'MK DiBoux ', 'Small Forward ', [11, 0, 23, 17, 0] ]
 ]
-
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
 
 function convert_roster_format (nestedArray) {

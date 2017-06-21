@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const { convert_roster_format } = require('./nested_array_2_convert.js')
+const  convert_roster_format  = require('./nested_array_2_convert.js')
 
 describe('Convert Roster Format', () => {
   it('should convert nested array into Object', () => {
